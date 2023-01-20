@@ -22,7 +22,8 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
   const [category, setCategory] = useState('');
   const [type, setType] = useState('deposit');
 
-  async  function handleCreateNewTransaction(event: FormEvent) {
+  async function handleCreateNewTransaction(event: FormEvent) {
+    //Ao submeter os dados, os dados não são enviados para outro destino, permanecem na página
     event.preventDefault();
 
     await createTransaction({
